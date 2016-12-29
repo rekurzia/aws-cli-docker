@@ -1,0 +1,20 @@
+sudo: required
+
+language: bash
+
+services:
+  - docker
+
+before_script:
+  - docker -v
+  - docker-compose -v
+
+script:
+  - docker-compose build aws-cli
+
+deploy:
+  provider: script
+  script: ./deploy.sh
+  on:
+    branch: master
+  skip_cleanup: true
