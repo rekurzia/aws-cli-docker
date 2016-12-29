@@ -1,0 +1,8 @@
+version: "2"
+
+services:
+
+  aws-cli:
+    build: .
+    tty: true
+    stdin_open: true
