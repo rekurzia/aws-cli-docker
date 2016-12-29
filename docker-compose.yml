@@ -4,5 +4,6 @@ services:
 
   aws-cli:
     build: .
+    image: rekurzia/aws-cli-docker
     tty: true
     stdin_open: true
